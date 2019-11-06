@@ -4,7 +4,7 @@ include('./class/class_lib.php');
 include('header.php');
 
 $cons = new Consulta();
-$preg = $cons->listarEncuesta();
+$preg = $cons->listarReporte();
 
 $cons = new Consulta();
 $resp = $cons->listarRespuesta();
@@ -41,4 +41,8 @@ $value = $_POST['radio'];
             <?php } ?>
         </div>
     </div>
+</div>
+
+<div class="d-flex justify-content-center mt-5">
+    <a href="seleccion_reporte.php" class="btn btn-success">Regresar</a>
 </div>

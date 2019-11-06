@@ -12,8 +12,13 @@ $resp = $cons->listarRespuesta();
 <div class="d-flex justify-content-center">
     <div class="card " style="width: 50rem;">
 
-        <div class="card-header">
-            <h1>Lista de preguntas</h1>
+        <div class="card-header d-flex justify-content-between justify-items-center">
+            <div class="">
+                <h1>Lista de preguntas</h1>
+            </div>
+            <div class="w-40">
+                <a class="btn btn-success" href="crear_pregunta.php">Crear</a>
+            </div>
         </div>
         <div class="card-body">
             <?php if ($preg != null) { ?>
@@ -25,12 +30,16 @@ $resp = $cons->listarRespuesta();
                                 <button type="submit" class="btn btn-danger">Borrar</button>
                                 <input type="hidden" name="id" value="<?php echo $keyPreg['id'] ?>">
                             </form>
-                            <a href="http://" class="btn btn-primary ml-3">Editar</a>
+                            <form action="editar.php" method="post">
+                                <button type="submit" class="btn btn-warning ml-3">Editar</button>
+                                <input type="hidden" name="id" value="<?php echo $keyPreg['id'] ?>">
+                            </form>
+
                         </div>
 
                     </div>
 
-                    <table class="ml-5 mb-5">
+                    <table class="ml-5">
                         <?php foreach ($resp as $keyResp) { ?>
                             <?php if ($keyPreg['id'] == $keyResp['idenc']) { ?>
                                 <tr>

@@ -11,10 +11,10 @@
 
 <body>
     <nav class="nav">
-        <a class="nav-link" href="crear_pregunta.php">Crear</a>
+        <a class="nav-link" href="Index.php">Presentacion</a>
         <a class="nav-link" href="ver_encuesta.php">Encuesta</a>
         <a class="nav-link" href="mantenimiento.php">Mantenimiento</a>
-        <a class="nav-link" href="seleccion_reporte.php">Estadistica</a>
+        <a class="nav-link" href="seleccion_reporte.php">Reporte</a>
     </nav>
 
     

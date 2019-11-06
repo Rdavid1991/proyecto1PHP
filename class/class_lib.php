@@ -2,8 +2,7 @@
 
 require __DIR__.'/../database/conect.php';
 
-class Preguntas extends credencialesDB
-{
+class Preguntas extends credencialesDB{
     public function __construct()
     {
         parent::__construct();
@@ -78,6 +77,30 @@ class Consulta extends credencialesDB{
         }
     }
 
+    public function listarHacerEncuesta()
+    {
+        $instruccion = "CALL encuesta()";
+        $encuesta = $this->_db->query($instruccion)->fetch_all(MYSQLI_ASSOC);
+
+        if ($encuesta) {
+            return $encuesta;
+            $encuesta->close();
+            $this->_db->close();
+        }
+    }
+
+    public function listarReporte()
+    {
+        $instruccion = "CALL reporte()";
+        $encuesta = $this->_db->query($instruccion)->fetch_all(MYSQLI_ASSOC);
+
+        if ($encuesta) {
+            return $encuesta;
+            $encuesta->close();
+            $this->_db->close();
+        }
+    }
+
     public function consultarVoto($id){
         $instruccion = "CALL consultarVoto('".$id."')";
         $voto = $this->_db->query($instruccion)->fetch_all(MYSQLI_ASSOC);
@@ -130,5 +153,50 @@ class Mantenimiento extends credencialesDB{
         }
     }
 
-  
+    public function editarPreguntas($id)
+    {
+        $instruccion = "CALL editarPregunta('" . $id . "')";
+        $respuesta = $this->_db->query($instruccion)->fetch_array(MYSQLI_BOTH);
+
+        if ($respuesta) {
+            return $respuesta;
+            $respuesta->close();
+            $this->_db->close();
+        }
+    }
+
+    public function editarRespuestas($id)
+    {
+        $instruccion = "CALL editarRespuesta('" . $id . "')";
+        $respuesta = $this->_db->query($instruccion)->fetch_all(MYSQLI_ASSOC);
+
+        if ($respuesta) {
+            return $respuesta;
+            $respuesta->close();
+            $this->_db->close();
+        }
+    }
+
+    public function guardarPreguntaEditada($preguntaNueva, $preguntaVieja){
+        $instruccion = "CALL guardarPreguntaEditada('" . $preguntaNueva . "','" . $preguntaVieja . "')";
+        $respuesta = $this->_db->query($instruccion);
+
+        if ($respuesta) {
+            return $respuesta;
+            $respuesta->close();
+            $this->_db->close();
+        }
+    }
+
+    public function guardarRespuestaEditada($valor, $id)
+    {
+        $instruccion = "CALL guardarRespuestaEditada('" . $valor . "','" . $id . "')";
+        $respuesta = $this->_db->query($instruccion);
+
+        if ($respuesta) {
+            return $respuesta;
+            $respuesta->close();
+            $this->_db->close();
+        }
+    }
 }
