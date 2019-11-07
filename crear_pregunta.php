@@ -5,16 +5,16 @@ include('header.php');
     <form action="crear_respuesta.php" method="post">
         <div class="card" style="width:33.3rem">
             <div class="card-header">
-                <h2>Crear Encuesta</h2>
+                <h2>Crear pregunta</h2>
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="">Encuesta</label>
-                    <input type="text" class="form-control" name="titulo" placeholder="encuesta" required>
+                    <h3>Pregunta</h3>
+                    <input type="text" class="form-control" name="titulo" placeholder="Inserte pregunta" required>
                 </div>
                 <div class="form-group">
-                    <label for="">Numero de preguntas</label>
-                    <input type="number" class="form-control" name="preguntas" placeholder="Pregunutas" min="0" max="5">
+                    <h3>Numero de respuestas</h3>
+                    <input type="number" class="form-control" name="preguntas" placeholder="Inserte numero de respuesta" min="0" max="5" required>
                 </div>
                 <div class="form-group d-flex justify-content-between">
                     <div class="custom-control custom-checkbox">

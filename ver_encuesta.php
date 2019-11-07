@@ -14,7 +14,7 @@ $resp = $cons->listarRespuesta();
     <form action="insertar_votos.php" method="post">
         <div class="card" style="width: 45rem;">
             <div class="card-header">
-                Tabla
+                <h4>Encuesta: Uso de redes sociales</h4>
             </div>
             <div class="card-body">
                 <?php if ($preg != null) { ?>
@@ -28,7 +28,7 @@ $resp = $cons->listarRespuesta();
                                 <?php foreach ($resp as $keyResp) { ?>
                                     <?php if ($keyPreg['id'] == $keyResp['idenc']) { ?>
                                         <tr>
-                                            <td><input type="checkbox" class="ml-4" value="<?php echo $keyResp['id'] ?>" name="<?php echo $keyResp['idenc'] ?>"></td>
+                                            <td><input type="checkbox" class="ml-4" value="<?php echo $keyResp['id'] ?>" name="<?php echo $keyResp['idenc'] ?>" required></td>
                                             <td><?php echo $keyResp['texto'] ?></td>
                                         </tr>
                                     <?php } ?>
@@ -37,7 +37,7 @@ $resp = $cons->listarRespuesta();
                                 <?php foreach ($resp as $keyResp) { ?>
                                     <?php if ($keyPreg['id'] == $keyResp['idenc']) { ?>
                                         <tr>
-                                            <td><input type="radio" class="ml-4" value="<?php echo $keyResp['id'] ?>" name="<?php echo $keyResp['idenc'] ?>"></td>
+                                            <td><input type="radio" class="ml-4" value="<?php echo $keyResp['id'] ?>" name="<?php echo $keyResp['idenc'] ?>" required></td>
                                             <td><?php echo $keyResp['texto'] ?></td>
                                         </tr>
                                     <?php } ?>

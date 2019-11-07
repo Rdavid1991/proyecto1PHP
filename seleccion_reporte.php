@@ -3,7 +3,7 @@
 <div class="d-flex justify-content-center align-items-center" style="height:30rem">
     <div class="card" style="width:30rem; height: 20rem;">
         <div class="card-header">
-            <h2>Rporte</h2>
+            <h2>Reporte</h2>
         </div>
         <div class="card-body">
             <form action="estadistica.php" method="post">

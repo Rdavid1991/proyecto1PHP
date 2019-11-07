@@ -14,7 +14,7 @@ $resp = $cons->listarRespuesta();
 
         <div class="card-header d-flex justify-content-between justify-items-center">
             <div class="">
-                <h1>Lista de preguntas</h1>
+                <h3>Mantenimiento de preguntas y respuestas</h3>
             </div>
             <div class="w-40">
                 <a class="btn btn-success" href="crear_pregunta.php">Crear</a>

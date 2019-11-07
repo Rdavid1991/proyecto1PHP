@@ -20,8 +20,8 @@ if (array_key_exists('crear', $_POST)) {
                 <div class="card-body">
                     <?php for ($i = 1; $i <= $preguntas; $i++) { ?>
                         <div class="form-group">
-                            <label for="">Pregunta <?php echo $i ?></label>
-                            <input type="text" name="p<?php echo $i ?>" class="form-control">
+                            <label for="">Opciones o respuestas <?php echo $i ?></label>
+                            <input type="text" name="p<?php echo $i ?>" class="form-control" placeholder="Insertar opcion o respuesta" required>
                         </div>
                     <?php } ?>
                     <div class="form-group d-flex justify-content-center">

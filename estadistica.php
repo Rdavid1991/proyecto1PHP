@@ -15,7 +15,7 @@ $value = $_POST['radio'];
 <div class="d-flex justify-content-center align-items-center" style="height:30rem">
     <div class="card " style="width: 50rem;">
         <div class="card-header">
-            <h1>Lista de preguntas</h1>
+            <h1>Resultado de reporte</h1>
         </div>
         <div class="card-body">
             <?php if ($preg != null) { ?>
